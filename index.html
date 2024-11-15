@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-16-2024</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#envelopes">Messages</a></li>
+            <li><a href="#playlist">Playlist</a></li>
+            <li><a href="#video">Video</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section id="hero" class="section hero">
+            <h1>Happy Birthday, Aking Mahal! 🎉</h1>
+            <p>This page is dedicated for you and YOU ONLY, HMPH!</p>
+        </section>
+
+        <!-- Gallery Section as Carousel -->
+        <section id="gallery" class="section gallery">
+            <h2>Memory Lane 📸</h2>
+            <div class="carousel-container">
+                <div class="carousel-photo">
+                    <img id="carousel-image" src="photo1.jpg" alt="Memory 1">
+                    <div id="carousel-caption" class="polaroid-caption">A Beautiful Day</div>
+                </div>
+                <button id="prev-photo" class="carousel-btn">❮</button>
+                <button id="next-photo" class="carousel-btn">❯</button>
+            </div>
+        </section>
+
+        <!-- Playlist Section -->
+        <section id="playlist" class="section playlist">
+            <h2>A playlist that reminds me of you🎶</h2>
+            <div class="audio-player">
+                <div class="audio-info">
+                    <p id="song-title">Pasilyo - SunKissed Lola</p>
+                    <p id="song-artist">A special song for you</p>
+                </div>
+                
+                <!-- Progress Bar and Time Display -->
+                <div class="progress-container">
+                    <span id="current-time">0:00</span>
+                    <input type="range" id="progress-bar" min="0" max="100" value="0">
+                    <span id="total-duration">0:00</span>
+                </div>
+
+                <audio id="audio" src="songs/P.mp3"></audio>
+                
+                <!-- Controls -->
+                <div class="controls">
+                    <button id="prev"><i class="fas fa-backward"></i></button>
+                    <button id="play-pause"><i class="fas fa-play"></i></button>
+                    <button id="next"><i class="fas fa-forward"></i></button>
+                </div>
+
+                <!-- Volume Control -->
+                <div class="volume-container">
+                    <button id="volume-icon"><i class="fas fa-volume-up"></i></button>
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Envelopes Section -->
+        <section id="envelopes" class="section envelopes">
+            <h2>Song Meanings 💌</h2>
+            <div class="envelope-grid">
+                <div class="envelope" onclick="openModal(0)">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="envelope" onclick="openModal(1)">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="envelope" onclick="openModal(2)">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="envelope" onclick="openModal(3)">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="envelope" onclick="openModal(4)">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="envelope" onclick="openModal(5)">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="envelope" onclick="openModal(6)">
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+            <!-- Modals for each envelope -->
+            <div class="modal" id="modal-0">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal(0)">&times;</span>
+                    <p><span style="color: #ff79c6;">P</span>asilyo</p>
+                    <p>Well, you know about this song na! I am happy to walk through
+                        this <i>pasilyo</i> of life with you, one step at a time, hehe.
+                    </p>
+                </div>
+            </div>
+            <div class="modal" id="modal-1">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal(1)">&times;</span>
+                    <p><span style="color: #ff79c6;">A</span>ko Na Lang</p>
+                    <p>Ako Na Lang Sana~, my go-to delulu OA song thinking about you
+                        before we officially started dating, HAHAHA.
+                    </p>
+                </div>
+            </div>
+            <div class="modal" id="modal-2">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal(2)">&times;</span>
+                    <p><span style="color: #ff79c6;">U</span>nderstand</p>
+                    <p>"I got you, you got me
+                    <p>When it's us, babe, you make me feel complete</p>
+                    <p>You're all I need"</p>   
+                    <p>You're the only one who understands, my love!!!</p>
+                </div>
+            </div>
+            <div class="modal" id="modal-3">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal(3)">&times;</span>
+                    <p><span style="color: #ff79c6;">L</span>ovesick</p>
+                    <p>You give me the lovesick, HUHUHU. I picked this song
+                        because it really encapsulates how I get this "some
+                        of sort of disease" that my heart is too weak for love.
+                        But you made sure that my heart deserved love that is calm and gentle, MWA.
+                    </p>
+                </div>
+            </div>
+            <div class="modal" id="modal-4">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal(4)">&times;</span>
+                    <p><span style="color: #ff79c6;">i</span>n my heart</p>
+                    <p>"I wanna be where you are</p>
+                    <p>Feel so close, though you're so far</p>
+                    <p>You're my world"</p>
+                    <p>From the city streets at night</p>
+                    <p>Pull you close and hold you tight</p>
+                    <p>You're my girl"</p>
+                    <p>This first verse always remind that you're always in my <i>heart</i>.</p>
+                </div>
+            </div>
+            <div class="modal" id="modal-5">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal(5)">&times;</span>
+                        <p><span style="color: #ff79c6;">N</span>othing's Gonna Hurt You</p>
+                        <p>I actually found this song by accident sa AppMu. I picked this
+                            because I believe I interpret this song to our relationship
+                            where, <i>"nothing's gonna hurt you, baby."</i>, I will always 
+                            protect your love and cherish it because, <i>"as long as you're
+                                with me you'll just be fine."</i>
+                        </p>
+                    </div>
+            </div>
+            <div class="modal" id="modal-6">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal(6)">&times;</span>
+                        <p><span style="color: #ff79c6;">E</span>asy</p>
+                        <p>A classic song that I like, hehe! <i>I can say that lovin' you is easy</i>,
+                        but I will always be here with you in every stage of your growth and hardships.
+                        We for 4 lyferz, BUBU!!!!</p>
+                    </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="video" class="section video-message">
+            <h2>Birthday Greeting 🎥</h2>
+            <video controls class="birthday-video">
+                <source src="videos/brithday-greeting.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
